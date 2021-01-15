@@ -9,11 +9,11 @@
     "pre-watch": "npm run clean-dist && npm run copy-dev-manifest && npm run copy-hot-reload",
     "pre-build": "npm run clean-dist && npm run copy-prod-manifest",
     "post-build": "npm run zip-build",
-    "clean-dist": "rimraf .\\dist\\**\\*",
-    "copy-prod-manifest": "copy .\\src\\manifest.production.json .\\dist\\manifest.json",
-    "copy-dev-manifest": "copy .\\src\\manifest.dev.json .\\dist\\manifest.json",
-    "copy-hot-reload": "copy .\\src\\hot-reload.js .\\dist",
-    "zip-build": "cross-zip .\\dist .\\.releases\\latest-release.zip"
+    "clean-dist": "rimraf ./dist/**/*",
+    "copy-prod-manifest": "cp ./src/manifest.production.json ./dist/manifest.json",
+    "copy-dev-manifest": "cp ./src/manifest.dev.json ./dist/manifest.json",
+    "copy-hot-reload": "cp ./src/hot-reload.js ./dist",
+    "zip-build": "cross-zip ./dist ./releases/latest-release.zip"
   },
   "staticPath": {
     "source": [
@@ -53,6 +53,7 @@
     "rimraf": "^2.6.3"
   },
   "dependencies": {
+    "md5": "^2.3.0",
     "preact": "^8.5.1"
   }
 }

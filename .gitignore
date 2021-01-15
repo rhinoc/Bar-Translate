@@ -7,7 +7,7 @@ dist/
 
 node_modules/
 
-\.releases/
+\releases/
 
 src/manifest\.firefox\.json
 

@@ -1,6 +1,7 @@
 import googleTranslateService from './googletranslateService'
 import yandexService from './yandexService'
 import googleScriptService from './googleScriptService'
+import baiduService from "./baiduService"
 
 
 var myBody = new Blob();
@@ -16,6 +17,7 @@ let translateService = {
 
   list: {
       'googleTranslate': googleTranslateService(),
+      'baidu': baiduService(),
       'yandex': yandexService(),
       'googleScript': googleScriptService()
   },
@@ -23,6 +25,7 @@ let translateService = {
   order: [
     'googleTranslate',
     'googleScript',
+    'baidu',
     'yandex'
   ],
 

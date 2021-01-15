@@ -208,13 +208,15 @@ const messages = {
   },
 
   getErrorDescription(sourceLanguage, targetLanguage, query, translateService) {
-    return `<dim>Connexion problem with ${
+    return `<dim>Connection problem with ${
       translateService.name
     } api</dim>, press enter to translate <match>${query.trunc(
       25
     )}</match> in <url>${
       langNames[targetLanguage].name
-    }</url> on <match><url>Google Translate</url></match>`;
+    }</url> on <match><url>${
+      translateService.name
+    }</url></match> webpage`;
   },
 
   getLanguageSuggestDefaultDescription() {
